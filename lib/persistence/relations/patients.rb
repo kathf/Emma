@@ -9,12 +9,12 @@ module Relations
     # commands to make changes to our data. It ensures that only appropriate
     # attributes are written through to the database table.
     schema(:patients) do
-      attribute :id, Types::Serial
-      attribute :first_names, Types::String
-      attribute :last_name, Types::String
-      attribute :preferred_name, Types::String
+      attribute :id, Types::Strict::Serial
+      attribute :first_names, Types::Coercible::String
+      attribute :last_name, Types::Coercible::String
+      attribute :preferred_name, Types::Coercible::String
       # attribute :alternative_names, Types::String # perhaps names should be it's own table
-      attribute :archived, Types::Bool
+      attribute :archived, Types::Strict::Bool
 
     end
 
