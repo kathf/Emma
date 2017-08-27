@@ -1,5 +1,9 @@
 # EmmaWithRoda
 
+Using this: https://www.icelab.com.au/notes/a-conversational-introduction-to-rom-rb/
+
+Refer to this for app structure: https://discourse.dry-rb.org/t/rationale-for-locations-of-files-within-dry-web-roda-apps/244
+
 ## First steps
 
 1. Run `bundle`
