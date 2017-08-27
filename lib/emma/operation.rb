@@ -2,7 +2,7 @@
 
 require "dry/transaction/operation"
 
-module EmmaWithRoda
+module Emma
   class Operation
     def self.inherited(subclass)
       subclass.include Dry::Transaction::Operation

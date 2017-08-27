@@ -1,4 +1,4 @@
-# EmmaWithRoda
+# Emma
 
 Using this: https://www.icelab.com.au/notes/a-conversational-introduction-to-rom-rb/
 

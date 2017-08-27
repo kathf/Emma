@@ -1,7 +1,7 @@
 require "dry/web/roda/application"
 require_relative "container"
 
-module EmmaWithRoda
+module Emma
   class Application < Dry::Web::Roda::Application
     configure do |config|
       config.container = Container

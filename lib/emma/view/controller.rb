@@ -2,9 +2,9 @@
 
 require "slim"
 require "dry-view"
-require "emma_with_roda/container"
+require "emma/container"
 
-module EmmaWithRoda
+module Emma
   module View
     class Controller < Dry::View::Controller
       configure do |config|

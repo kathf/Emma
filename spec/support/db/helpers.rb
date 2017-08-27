@@ -3,11 +3,11 @@ module Test
     module_function
 
     def rom
-      EmmaWithRoda::Container["persistence.rom"]
+      Emma::Container["persistence.rom"]
     end
 
     def db
-      EmmaWithRoda::Container["persistence.db"]
+      Emma::Container["persistence.db"]
     end
   end
 end

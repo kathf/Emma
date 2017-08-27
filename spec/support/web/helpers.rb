@@ -3,7 +3,7 @@ module Test
     module_function
 
     def app
-      EmmaWithRoda::Application.app
+      Emma::Application.app
     end
   end
 end

@@ -1,8 +1,8 @@
-require "emma_with_roda/view/context"
+require "emma/view/context"
 
 module Recorder
   module View
-    class Context < EmmaWithRoda::View::Context
+    class Context < Emma::View::Context
     end
   end
 end

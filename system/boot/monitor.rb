@@ -1,4 +1,4 @@
-EmmaWithRoda::Container.finalize :monitor do |_container|
+Emma::Container.finalize :monitor do |_container|
   init do
     require "dry/monitor"
   end

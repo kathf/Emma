@@ -2,7 +2,7 @@ require "bundler/setup"
 require "byebug" unless ENV["RACK_ENV"] == "production"
 require "rom/sql/rake_task"
 require "shellwords"
-require_relative "system/emma_with_roda/container"
+require_relative "system/emma/container"
 
 begin
   require "rspec/core/rake_task"
@@ -12,11 +12,11 @@ rescue LoadError
 end
 
 def db
-  EmmaWithRoda::Container["persistence.db"]
+  Emma::Container["persistence.db"]
 end
 
 def settings
-  EmmaWithRoda::Container["settings"]
+  Emma::Container["settings"]
 end
 
 def database_uri
@@ -35,11 +35,11 @@ end
 
 namespace :db do
   task :setup do
-    EmmaWithRoda::Container.boot :rom
+    Emma::Container.boot :rom
   end
 
   task :settings do
-    EmmaWithRoda::Container.boot :settings
+    Emma::Container.boot :settings
   end
 
   desc "Print current database schema version"

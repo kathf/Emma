@@ -1,6 +1,6 @@
 # auto_register: false
 
-module EmmaWithRoda
+module Emma
   module View
     class Context
       attr_reader :attrs

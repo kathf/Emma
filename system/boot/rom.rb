@@ -1,4 +1,4 @@
-EmmaWithRoda::Container.namespace "persistence" do |container|
+Emma::Container.namespace "persistence" do |container|
   container.finalize :rom do
     init do
       require "sequel"
