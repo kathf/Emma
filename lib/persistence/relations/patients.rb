@@ -12,7 +12,7 @@ module Relations
       attribute :id, Types::Strict::Serial
       attribute :first_names, Types::Coercible::String
       attribute :last_name, Types::Coercible::String
-      attribute :preferred_name, Types::Coercible::String
+      attribute :preferred_name, Types::Coercible::String.optional
       # attribute :alternative_names, Types::String # perhaps names should be it's own table
       attribute :archived, Types::Strict::Bool
 
