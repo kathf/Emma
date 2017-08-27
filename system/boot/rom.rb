@@ -19,12 +19,14 @@ EmmaWithRoda::Container.namespace "persistence" do |container|
         extensions: %i[error_sql pg_array pg_json],
       )
 
+      # Add some rom plugins for sql - not sure what these do thou
       rom_config.plugin :sql, relations: :instrumentation do |plugin_config|
         plugin_config.notifications = notifications
       end
 
       rom_config.plugin :sql, relations: :auto_restrictions
 
+      # register `config` and `db` objects on the persistence container
       container.register "config", rom_config
       container.register "db", rom_config.gateways[:default].connection
     end
