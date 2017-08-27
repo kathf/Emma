@@ -16,6 +16,9 @@ module Relations
       # attribute :alternative_names, Types::String # perhaps names should be it's own table
       attribute :archived, Types::Strict::Bool
 
+      associate do
+        many :contact_details
+      end
     end
 
     # Define some composable, reusable query methods to return filtered results
