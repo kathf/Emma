@@ -9,9 +9,8 @@ module Relations
       attribute :address_line_3, Types::String
       attribute :suburb, Types::String
       attribute :postcode, Types::Int
-      attribute :state, Types::String
-      attribute :country, Types::String
-      attribute :email, Types::String
+      attribute :state, Types::String #TODO replace with assocication
+      attribute :country, Types::String.default('Australia') #TODO replace with assocication
 
       associate do
         belongs :patients

@@ -1,13 +1,6 @@
-# The first thing we need to define is a Relation. Relations are the interface
-# to a particular collection in our data source, which in SQL terms is either a
-# table or a view.
 module Relations
-  # This relation is for the patients table.
   class Patients < ROM::Relation[:sql]
 
-    # Define a canonical schema for this relation. This will be used when we use
-    # commands to make changes to our data. It ensures that only appropriate
-    # attributes are written through to the database table.
     schema(:patients) do
       attribute :id, Types::Strict::Serial
       attribute :first_names, Types::Coercible::String
@@ -21,8 +14,6 @@ module Relations
       end
     end
 
-    # Define some composable, reusable query methods to return filtered results
-    # from our database table. We’ll use them in a moment.
     def by_id(id)
       where(id: id)
     end
